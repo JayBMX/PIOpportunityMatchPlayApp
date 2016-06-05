@@ -1,0 +1,57 @@
+{
+    "__DecisionID__": "bc4dc12f-18b6-4eb4-a728-d52ec7f0762c0",
+    "decision": {
+        "statusFlag": "SATISFIES",
+        "score": 0.7023401221123601,
+        "personalityAttributes": [
+            {
+                "id": "Achievement striving",
+                "name": "Achievement striving",
+                "percentage": 0.9380747767506684,
+                "children": [],
+                "sampling_error": 0,
+                "category": "personality"
+            },
+            {
+                "id": "Cooperation",
+                "name": "Cooperation",
+                "percentage": 0.821930730676822,
+                "children": [],
+                "sampling_error": 0,
+                "category": "personality"
+            },
+            {
+                "id": "Imagination",
+                "name": "Imagination",
+                "percentage": 0.9592695099729446,
+                "children": [],
+                "sampling_error": 0,
+                "category": "personality"
+            },
+            {
+                "id": "Intellect",
+                "name": "Intellect",
+                "percentage": 0.9799082962703202,
+                "children": [],
+                "sampling_error": 0,
+                "category": "personality"
+            },
+            {
+                "id": "Curiosity",
+                "name": "Curiosity",
+                "percentage": 0.1185320827716359,
+                "children": [],
+                "sampling_error": 0,
+                "category": "needs"
+            },
+            {
+                "id": "Practicality",
+                "name": "Practicality",
+                "percentage": 0.39632533623176947,
+                "children": [],
+                "sampling_error": 0,
+                "category": "needs"
+            }
+        ]
+    }
+}
