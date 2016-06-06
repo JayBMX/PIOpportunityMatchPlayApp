@@ -1,0 +1,81 @@
+<!-- Copyright (C) 2016 IBM Corporation  -->
+@(textSampleForm: Form[com.ibm.developerWorks.demo.models.JobApplication])
+@import helper._
+@import helper.twitterBootstrap._
+@main("PIOpportunityMatchPlayApp | Application") {
+	
+	<nav class="top-bar" data-topbar>
+		<ul class="title-area">
+		<li class="name">
+			<h1><a href="#">PIOpportunityMatchPlayApp</a></h1>
+		</li>
+		<li class="toggle-topbar menu-icon">
+		<a href="">
+		<span>Menu</span>
+		</a>
+		</li>
+		</ul>
+		
+	<section class="top-bar-section">
+	<!-- Left Nav Section --> 
+	<ul class="left">
+		
+	</ul>
+	
+	<!-- Right Nav Section -->
+	<ul class="right">
+		<li class=""><a href="/analyze"><i class="fi-torsos-all"></i>	Application Page</a></li>
+	</ul>
+	
+	</section>
+	</nav>
+
+	<!-- body content div -->
+	<div class="row">
+	<div class="large-12 columns">
+	<!-- First row div - site news and announcements slideshow -->
+	<div class="row">
+	    <div class="large-3 columns">
+			</br>
+		</div>
+    	<div class="large-6 columns">
+			<h1>Submit Your Application</h1>
+			@helper.form(action= com.ibm.developerWorks.demo.controllers.routes.Analyze.analyzeText(), 'enctype -> "multipart/form-data"){
+			<fieldset>
+				@helper.inputText(textSampleForm("firstname"), '_label -> "First Name", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("lastname"), '_label -> "Last Name", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("addressline1"), '_label -> "Address", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("addressline2"), '_label -> "Address (Continued)", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("city"), '_label -> "City", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("province"), '_label -> "State/Province", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("country"), '_label -> "Country", '_showConstraints -> false)
+				@helper.inputText(textSampleForm("postalcode"), '_label -> "ZIP/Postal Code", '_showConstraints -> false)
+								
+				@helper.inputFile(textSampleForm("resumefile"), '_label -> "Upload your resume", '_showConstraints -> false)
+				@helper.textarea(textSampleForm("text"), '_label -> "Describe why you're the best fit for this position:", '_showConstraints -> false)
+				@helper.textarea(textSampleForm("text2"), '_label -> "Describe your accomplishments:", '_showConstraints -> false)
+				@helper.textarea(textSampleForm("text3"), '_label -> "Describe your shortcomings:", '_showConstraints -> false)
+				
+			</fieldset>
+				
+			</br>
+			<input type="submit" class="radius small button" value="Submit">
+			<a class="radius small button" href="@com.ibm.developerWorks.demo.controllers.routes.Analyze.showLandingPage()">Cancel</a>
+			
+			}
+      	</div>
+		<div class="large-3 columns">
+			</br>
+		</div>
+    </div>
+    
+    <!-- hr divider -->
+    <hr>
+    
+    
+    <!-- end of content columns div -->
+    </div>
+    <!-- end of content div row -->
+    </div>
+		
+	}

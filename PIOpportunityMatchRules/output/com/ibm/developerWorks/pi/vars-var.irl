@@ -1,0 +1,6 @@
+package com.ibm.developerWorks.pi {
+  variables {
+    int dimensionCount;
+    java.math.BigDecimal percentage;
+  }
+}

@@ -1,0 +1,198 @@
+## 
+## Copyright (C) 2016 IBM Corporation
+##
+# Vocabulary Properties
+uuid = 788bc25f-04de-47b7-9977-dbbdf682d673
+
+# com.ibm.developerWorks.pi.BigFive
+com.ibm.developerWorks.pi.BigFive#concept.label = big five
+
+# com.ibm.developerWorks.pi.BigFive.Agreeableness
+com.ibm.developerWorks.pi.BigFive.Agreeableness#concept.label = agreeableness
+com.ibm.developerWorks.pi.BigFive.Agreeableness.agreeableness#phrase.action = set the agreeableness of {this} to {agreeableness}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.agreeableness#phrase.navigation = {agreeableness} of {this}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.altruism#phrase.action = set the altruism of {this} to {altruism}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.altruism#phrase.navigation = {altruism} of {this}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.cooperation#phrase.action = set the cooperation of {this} to {cooperation}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.cooperation#phrase.navigation = {cooperation} of {this}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.modesty#phrase.action = set the modesty of {this} to {modesty}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.modesty#phrase.navigation = {modesty} of {this}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.morality#phrase.action = set the morality of {this} to {morality}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.morality#phrase.navigation = {morality} of {this}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.sympathy#phrase.action = set the sympathy of {this} to {sympathy}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.sympathy#phrase.navigation = {sympathy} of {this}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.trust#phrase.action = set the trust of {this} to {trust}
+com.ibm.developerWorks.pi.BigFive.Agreeableness.trust#phrase.navigation = {trust} of {this}
+
+# com.ibm.developerWorks.pi.BigFive.Conscientiousness
+com.ibm.developerWorks.pi.BigFive.Conscientiousness#concept.label = conscientiousness
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.achievement#phrase.action = set the achievement of {this} to {achievement}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.achievement#phrase.navigation = {achievement} of {this}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.cautiousness#phrase.action = set the cautiousness of {this} to {cautiousness}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.cautiousness#phrase.navigation = {cautiousness} of {this}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.conscientiousness#phrase.action = set the conscientiousness of {this} to {conscientiousness}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.conscientiousness#phrase.navigation = {conscientiousness} of {this}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.dutifulness#phrase.action = set the dutifulness of {this} to {dutifulness}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.dutifulness#phrase.navigation = {dutifulness} of {this}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.orderliness#phrase.action = set the orderliness of {this} to {orderliness}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.orderliness#phrase.navigation = {orderliness} of {this}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.selfDiscipline#phrase.action = set the self discipline of {this} to {self discipline}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.selfDiscipline#phrase.navigation = {self discipline} of {this}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.selfEfficacy#phrase.action = set the self efficacy of {this} to {self efficacy}
+com.ibm.developerWorks.pi.BigFive.Conscientiousness.selfEfficacy#phrase.navigation = {self efficacy} of {this}
+
+# com.ibm.developerWorks.pi.BigFive.EmotionalRange
+com.ibm.developerWorks.pi.BigFive.EmotionalRange#concept.label = emotional range
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.anger#phrase.action = set the anger of {this} to {anger}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.anger#phrase.navigation = {anger} of {this}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.anxiety#phrase.action = set the anxiety of {this} to {anxiety}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.anxiety#phrase.navigation = {anxiety} of {this}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.depression#phrase.action = set the depression of {this} to {depression}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.depression#phrase.navigation = {depression} of {this}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.immoderation#phrase.action = set the immoderation of {this} to {immoderation}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.immoderation#phrase.navigation = {immoderation} of {this}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.neuroticism#phrase.action = set the neuroticism of {this} to {neuroticism}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.neuroticism#phrase.navigation = {neuroticism} of {this}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.selfConsciousness#phrase.action = set the self consciousness of {this} to {self consciousness}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.selfConsciousness#phrase.navigation = {self consciousness} of {this}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.vulnerability#phrase.action = set the vulnerability of {this} to {vulnerability}
+com.ibm.developerWorks.pi.BigFive.EmotionalRange.vulnerability#phrase.navigation = {vulnerability} of {this}
+
+# com.ibm.developerWorks.pi.BigFive.Extraversion
+com.ibm.developerWorks.pi.BigFive.Extraversion#concept.label = extraversion
+com.ibm.developerWorks.pi.BigFive.Extraversion.activityLevel#phrase.action = set the activity level of {this} to {activity level}
+com.ibm.developerWorks.pi.BigFive.Extraversion.activityLevel#phrase.navigation = {activity level} of {this}
+com.ibm.developerWorks.pi.BigFive.Extraversion.assertiveness#phrase.action = set the assertiveness of {this} to {assertiveness}
+com.ibm.developerWorks.pi.BigFive.Extraversion.assertiveness#phrase.navigation = {assertiveness} of {this}
+com.ibm.developerWorks.pi.BigFive.Extraversion.cheerfulness#phrase.action = set the cheerfulness of {this} to {cheerfulness}
+com.ibm.developerWorks.pi.BigFive.Extraversion.cheerfulness#phrase.navigation = {cheerfulness} of {this}
+com.ibm.developerWorks.pi.BigFive.Extraversion.excitementSeeking#phrase.action = set the excitement seeking of {this} to {excitement seeking}
+com.ibm.developerWorks.pi.BigFive.Extraversion.excitementSeeking#phrase.navigation = {excitement seeking} of {this}
+com.ibm.developerWorks.pi.BigFive.Extraversion.extraversion#phrase.action = set the extraversion of {this} to {extraversion}
+com.ibm.developerWorks.pi.BigFive.Extraversion.extraversion#phrase.navigation = {extraversion} of {this}
+com.ibm.developerWorks.pi.BigFive.Extraversion.friendliness#phrase.action = set the friendliness of {this} to {friendliness}
+com.ibm.developerWorks.pi.BigFive.Extraversion.friendliness#phrase.navigation = {friendliness} of {this}
+com.ibm.developerWorks.pi.BigFive.Extraversion.gregariousness#phrase.action = set the gregariousness of {this} to {gregariousness}
+com.ibm.developerWorks.pi.BigFive.Extraversion.gregariousness#phrase.navigation = {gregariousness} of {this}
+
+# com.ibm.developerWorks.pi.BigFive.Openness
+com.ibm.developerWorks.pi.BigFive.Openness#concept.label = openness
+com.ibm.developerWorks.pi.BigFive.Openness.adventurousness#phrase.action = set the adventurousness of {this} to {adventurousness}
+com.ibm.developerWorks.pi.BigFive.Openness.adventurousness#phrase.navigation = {adventurousness} of {this}
+com.ibm.developerWorks.pi.BigFive.Openness.artisticInterests#phrase.action = set the artistic interests of {this} to {artistic interests}
+com.ibm.developerWorks.pi.BigFive.Openness.artisticInterests#phrase.navigation = {artistic interests} of {this}
+com.ibm.developerWorks.pi.BigFive.Openness.emotionality#phrase.action = set the emotionality of {this} to {emotionality}
+com.ibm.developerWorks.pi.BigFive.Openness.emotionality#phrase.navigation = {emotionality} of {this}
+com.ibm.developerWorks.pi.BigFive.Openness.imagination#phrase.action = set the imagination of {this} to {imagination}
+com.ibm.developerWorks.pi.BigFive.Openness.imagination#phrase.navigation = {imagination} of {this}
+com.ibm.developerWorks.pi.BigFive.Openness.intellect#phrase.action = set the intellect of {this} to {intellect}
+com.ibm.developerWorks.pi.BigFive.Openness.intellect#phrase.navigation = {intellect} of {this}
+com.ibm.developerWorks.pi.BigFive.Openness.liberalism#phrase.action = set the liberalism of {this} to {liberalism}
+com.ibm.developerWorks.pi.BigFive.Openness.liberalism#phrase.navigation = {liberalism} of {this}
+com.ibm.developerWorks.pi.BigFive.Openness.openness#phrase.action = set the openness of {this} to {openness}
+com.ibm.developerWorks.pi.BigFive.Openness.openness#phrase.navigation = {openness} of {this}
+com.ibm.developerWorks.pi.BigFive.agreeableness#phrase.action = set the agreeableness of {this} to {agreeableness}
+com.ibm.developerWorks.pi.BigFive.agreeableness#phrase.navigation = {agreeableness} of {this}
+com.ibm.developerWorks.pi.BigFive.conscientiousness#phrase.action = set the conscientiousness of {this} to {conscientiousness}
+com.ibm.developerWorks.pi.BigFive.conscientiousness#phrase.navigation = {conscientiousness} of {this}
+com.ibm.developerWorks.pi.BigFive.emotionalRange#phrase.action = set the emotional range of {this} to {emotional range}
+com.ibm.developerWorks.pi.BigFive.emotionalRange#phrase.navigation = {emotional range} of {this}
+com.ibm.developerWorks.pi.BigFive.extraversion#phrase.action = set the extraversion of {this} to {extraversion}
+com.ibm.developerWorks.pi.BigFive.extraversion#phrase.navigation = {extraversion} of {this}
+com.ibm.developerWorks.pi.BigFive.openness#phrase.action = set the openness of {this} to {openness}
+com.ibm.developerWorks.pi.BigFive.openness#phrase.navigation = {openness} of {this}
+
+# com.ibm.developerWorks.pi.Needs
+com.ibm.developerWorks.pi.Needs#concept.label = needs
+com.ibm.developerWorks.pi.Needs.challenge#phrase.action = set the challenge of {this} to {challenge}
+com.ibm.developerWorks.pi.Needs.challenge#phrase.navigation = {challenge} of {this}
+com.ibm.developerWorks.pi.Needs.closeness#phrase.action = set the closeness of {this} to {closeness}
+com.ibm.developerWorks.pi.Needs.closeness#phrase.navigation = {closeness} of {this}
+com.ibm.developerWorks.pi.Needs.curiosity#phrase.action = set the curiosity of {this} to {curiosity}
+com.ibm.developerWorks.pi.Needs.curiosity#phrase.navigation = {curiosity} of {this}
+com.ibm.developerWorks.pi.Needs.excitement#phrase.action = set the excitement of {this} to {excitement}
+com.ibm.developerWorks.pi.Needs.excitement#phrase.navigation = {excitement} of {this}
+com.ibm.developerWorks.pi.Needs.harmony#phrase.action = set the harmony of {this} to {harmony}
+com.ibm.developerWorks.pi.Needs.harmony#phrase.navigation = {harmony} of {this}
+com.ibm.developerWorks.pi.Needs.ideal#phrase.action = set the ideal of {this} to {ideal}
+com.ibm.developerWorks.pi.Needs.ideal#phrase.navigation = {ideal} of {this}
+com.ibm.developerWorks.pi.Needs.liberty#phrase.action = set the liberty of {this} to {liberty}
+com.ibm.developerWorks.pi.Needs.liberty#phrase.navigation = {liberty} of {this}
+com.ibm.developerWorks.pi.Needs.love#phrase.action = set the love of {this} to {love}
+com.ibm.developerWorks.pi.Needs.love#phrase.navigation = {love} of {this}
+com.ibm.developerWorks.pi.Needs.practicality#phrase.action = set the practicality of {this} to {practicality}
+com.ibm.developerWorks.pi.Needs.practicality#phrase.navigation = {practicality} of {this}
+com.ibm.developerWorks.pi.Needs.selfExpression#phrase.action = set the self expression of {this} to {self expression}
+com.ibm.developerWorks.pi.Needs.selfExpression#phrase.navigation = {self expression} of {this}
+com.ibm.developerWorks.pi.Needs.stability#phrase.action = set the stability of {this} to {stability}
+com.ibm.developerWorks.pi.Needs.stability#phrase.navigation = {stability} of {this}
+com.ibm.developerWorks.pi.Needs.structure#phrase.action = set the structure of {this} to {structure}
+com.ibm.developerWorks.pi.Needs.structure#phrase.navigation = {structure} of {this}
+
+# com.ibm.developerWorks.pi.PersonalityAttribute
+com.ibm.developerWorks.pi.PersonalityAttribute#concept.label = personality attributes
+com.ibm.developerWorks.pi.PersonalityAttribute.category#phrase.action = set the category of {this} to {category}
+com.ibm.developerWorks.pi.PersonalityAttribute.category#phrase.navigation = {category} of {this}
+com.ibm.developerWorks.pi.PersonalityAttribute.children#phrase.action = set the children of {this} to {children}
+com.ibm.developerWorks.pi.PersonalityAttribute.children#phrase.navigation = {children} of {this}
+com.ibm.developerWorks.pi.PersonalityAttribute.id#phrase.action = set the id of {this} to {id}
+com.ibm.developerWorks.pi.PersonalityAttribute.id#phrase.navigation = {id} of {this}
+com.ibm.developerWorks.pi.PersonalityAttribute.name#phrase.action = set the name of {this} to {name}
+com.ibm.developerWorks.pi.PersonalityAttribute.name#phrase.navigation = {name} of {this}
+com.ibm.developerWorks.pi.PersonalityAttribute.percentage#phrase.action = set the percentage of {this} to {percentage}
+com.ibm.developerWorks.pi.PersonalityAttribute.percentage#phrase.navigation = {percentage} of {this}
+com.ibm.developerWorks.pi.PersonalityAttribute.sampling_error#phrase.action = set the sampling error of {this} to {sampling error}
+com.ibm.developerWorks.pi.PersonalityAttribute.sampling_error#phrase.navigation = {sampling error} of {this}
+
+# com.ibm.developerWorks.pi.PersonalityInsights
+com.ibm.developerWorks.pi.PersonalityInsights#concept.label = personality insights
+com.ibm.developerWorks.pi.PersonalityInsights.id#phrase.action = set the id of {this} to {id}
+com.ibm.developerWorks.pi.PersonalityInsights.id#phrase.navigation = {id} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.needs#phrase.action = set the needs of {this} to {needs}
+com.ibm.developerWorks.pi.PersonalityInsights.needs#phrase.clearer = clear the needs of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.needs#phrase.navigation = {needs} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.personality#phrase.navigation = {personality} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.processed_lang#phrase.action = set the processed lang of {this} to {processed lang}
+com.ibm.developerWorks.pi.PersonalityInsights.processed_lang#phrase.navigation = {processed lang} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.source#phrase.action = set the source of {this} to {source}
+com.ibm.developerWorks.pi.PersonalityInsights.source#phrase.navigation = {source} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.tree#phrase.action = set the tree of {this} to {tree}
+com.ibm.developerWorks.pi.PersonalityInsights.tree#phrase.clearer = clear the tree of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.tree#phrase.navigation = {tree} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.values#phrase.action = set the values of {this} to {values}
+com.ibm.developerWorks.pi.PersonalityInsights.values#phrase.clearer = clear the values of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.values#phrase.navigation = {values} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.word_count#phrase.action = set the word count of {this} to {word count}
+com.ibm.developerWorks.pi.PersonalityInsights.word_count#phrase.navigation = {word count} of {this}
+com.ibm.developerWorks.pi.PersonalityInsights.word_count_message#phrase.action = set the word count message of {this} to {word count message}
+com.ibm.developerWorks.pi.PersonalityInsights.word_count_message#phrase.navigation = {word count message} of {this}
+
+# com.ibm.developerWorks.pi.PersonalityInsightsDecision
+com.ibm.developerWorks.pi.PersonalityInsightsDecision#concept.label = personality insights decision
+
+# com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG#concept.label = FLAG
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.EXCCEDS#instance.label = EXCCEDS
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.FAILS#instance.label = FAILS
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.SATISFIES#instance.label = SATISFIES
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.UNDETERMINED#instance.label = UNDETERMINED
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.addPersonalityAttribute(com.ibm.developerWorks.pi.PersonalityAttribute)#phrase.action = add {0} to the list of personality attributes of {this}
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.addPersonalityAttribute(java.util.Vector)#phrase.action = add {0} to the list of personality attributes of {this}
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.personalityAttributes#phrase.navigation = {personality attribute} of {this}
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.score#phrase.action = set the score of {this} to {score}
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.score#phrase.navigation = {score} of {this}
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.statusFlag#phrase.action = set the status flag of {this} to {status flag}
+com.ibm.developerWorks.pi.PersonalityInsightsDecision.statusFlag#phrase.navigation = {status flag} of {this}
+
+# com.ibm.developerWorks.pi.Values
+com.ibm.developerWorks.pi.Values#concept.label = values
+com.ibm.developerWorks.pi.Values.conservation#phrase.action = set the conservation of {this} to {conservation}
+com.ibm.developerWorks.pi.Values.conservation#phrase.navigation = {conservation} of {this}
+com.ibm.developerWorks.pi.Values.hedonism#phrase.action = set the hedonism of {this} to {hedonism}
+com.ibm.developerWorks.pi.Values.hedonism#phrase.navigation = {hedonism} of {this}
+com.ibm.developerWorks.pi.Values.opennessToChange#phrase.action = set the openness to change of {this} to {openness to change}
+com.ibm.developerWorks.pi.Values.opennessToChange#phrase.navigation = {openness to change} of {this}
+com.ibm.developerWorks.pi.Values.selfEnhancement#phrase.action = set the self enhancement of {this} to {self enhancement}
+com.ibm.developerWorks.pi.Values.selfEnhancement#phrase.navigation = {self enhancement} of {this}
+com.ibm.developerWorks.pi.Values.selfTranscendence#phrase.action = set the self transcendence of {this} to {self transcendence}
+com.ibm.developerWorks.pi.Values.selfTranscendence#phrase.navigation = {self transcendence} of {this}

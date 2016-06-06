@@ -1,0 +1,65 @@
+import java.math.BigDecimal;
+import com.ibm.developerWorks.pi.PersonalityInsightsDecision;
+import com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG;
+import com.ibm.developerWorks.pi.PersonalityAttribute;
+import java.util.Vector;
+use com.ibm.developerWorks.pi.percentage;
+use com.ibm.developerWorks.pi.dimensionCount;
+
+
+flowtask MainRuleFlow {
+  property mainflowtask = true;
+  property ilog.rules.business_name = "MainRuleFlow";
+  property ilog.rules.package_name = "";
+  body {
+    MainRuleFlow#Personality_Insight_Rules;
+    MainRuleFlow#Personality_Insight_Decision;
+  }
+};
+
+ruletask MainRuleFlow#Personality_Insight_Rules {
+  property ilog.rules.business_name = "MainRuleFlow>Personality Insight Rules";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  initialaction {
+    if (decision == null) {
+    	decision = new PersonalityInsightsDecision();
+    }
+    decision.score = new BigDecimal (0) ;
+    decision.statusFlag = FLAG.UNDETERMINED;
+
+  };
+  finalaction {
+    Vector  piattributes = decision.personalityAttributes;
+    if (piattributes != null) {
+    percentage = new BigDecimal(0);
+    for (int i =0; i < piattributes.size(); i++ ) {
+    	PersonalityAttribute piAttribute = (PersonalityAttribute)piattributes.get(i);
+    	percentage = percentage.add(piAttribute.percentage);
+    	dimensionCount++;
+    }
+    decision.score = percentage.divide(new BigDecimal(dimensionCount));
+    } else {
+    	
+    	decision.score = BigDecimal.ZERO;
+    }
+
+  };
+  body {
+    group("com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping")
+  }
+};
+
+ruletask MainRuleFlow#Personality_Insight_Decision {
+  property ilog.rules.business_name = "MainRuleFlow>Personality Insight Decision";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    group("com.ibm.developerWorks.pi.PIStatusFlag")
+  }
+};
+

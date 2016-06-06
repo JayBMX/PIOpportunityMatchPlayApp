@@ -1,0 +1,25 @@
+<!-- Copyright (C) 2016 IBM Corporation  -->
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("foundation-5.2.2/css/foundation.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("foundation-5.2.2/foundation-icons/foundation-icons.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("foundation-5.2.2/css/normalize.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    	<script src="@routes.Assets.at("foundation-5.2.2/js/vendor/modernizr.js")"></script>
+    </head>
+    <body>
+        @content
+        
+    <script src="@routes.Assets.at("foundation-5.2.2/js/vendor/jquery.js")"></script>
+    <script src="@routes.Assets.at("foundation-5.2.2/js/foundation.min.js")"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    
+    </body>
+</html>

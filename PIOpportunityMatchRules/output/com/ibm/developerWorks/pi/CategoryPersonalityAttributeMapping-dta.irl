@@ -1,0 +1,102 @@
+// begin DT CategoryPersonalityAttributeMapping
+// -- begin rule 'CategoryPersonalityAttributeMapping 0'
+package com.ibm.developerWorks.pi {
+   rule CategoryPersonalityAttributeMapping_0 {
+      property ilog.rules.business_name = "CategoryPersonalityAttributeMapping 1";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsights() from PersonalityInsights;
+         the_Agreeableness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Agreeableness() from PersonalityInsights.personality.agreeableness;
+         the_Conscientiousness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Conscientiousness() from PersonalityInsights.personality.conscientiousness;
+         the_EmotionalRange_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.EmotionalRange() from PersonalityInsights.personality.emotionalRange;
+         the_Extraversion_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Extraversion() from PersonalityInsights.personality.extraversion;
+         the_Openness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Openness() from PersonalityInsights.personality.openness;
+         the_Needs_Personality_Attributes: com.ibm.developerWorks.pi.Needs() from PersonalityInsights.needs;
+         the_Values_Personality_Attributes: com.ibm.developerWorks.pi.Values() from PersonalityInsights.values;
+         evaluate ((((category.equals("IT Specialist")))));
+      } then {
+         decision.addPersonalityAttribute(((java.util.Vector) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{the_Conscientiousness_Personality_Attributes.achievement, the_Agreeableness_Personality_Attributes.agreeableness, the_Openness_Personality_Attributes.intellect, the_Needs_Personality_Attributes.challenge, the_Needs_Personality_Attributes.practicality, the_Needs_Personality_Attributes.structure, the_Values_Personality_Attributes.opennessToChange}, new java.util.Vector())));
+      }
+   }
+}
+
+// -- end rule 'CategoryPersonalityAttributeMapping 0'
+// -- begin rule 'CategoryPersonalityAttributeMapping 1'
+package com.ibm.developerWorks.pi {
+   rule CategoryPersonalityAttributeMapping_1 {
+      property ilog.rules.business_name = "CategoryPersonalityAttributeMapping 2";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsights() from PersonalityInsights;
+         the_Agreeableness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Agreeableness() from PersonalityInsights.personality.agreeableness;
+         the_Conscientiousness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Conscientiousness() from PersonalityInsights.personality.conscientiousness;
+         the_EmotionalRange_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.EmotionalRange() from PersonalityInsights.personality.emotionalRange;
+         the_Extraversion_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Extraversion() from PersonalityInsights.personality.extraversion;
+         the_Openness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Openness() from PersonalityInsights.personality.openness;
+         the_Needs_Personality_Attributes: com.ibm.developerWorks.pi.Needs() from PersonalityInsights.needs;
+         the_Values_Personality_Attributes: com.ibm.developerWorks.pi.Values() from PersonalityInsights.values;
+         evaluate ((((category.equals("Research")))));
+      } then {
+         decision.addPersonalityAttribute(((java.util.Vector) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{the_Conscientiousness_Personality_Attributes.achievement, the_Agreeableness_Personality_Attributes.cooperation, the_Openness_Personality_Attributes.imagination, the_Openness_Personality_Attributes.intellect, the_Needs_Personality_Attributes.curiosity, the_Needs_Personality_Attributes.practicality}, new java.util.Vector())));
+      }
+   }
+}
+
+// -- end rule 'CategoryPersonalityAttributeMapping 1'
+// -- begin rule 'CategoryPersonalityAttributeMapping 2'
+package com.ibm.developerWorks.pi {
+   rule CategoryPersonalityAttributeMapping_2 {
+      property ilog.rules.business_name = "CategoryPersonalityAttributeMapping 3";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsights() from PersonalityInsights;
+         the_Agreeableness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Agreeableness() from PersonalityInsights.personality.agreeableness;
+         the_Conscientiousness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Conscientiousness() from PersonalityInsights.personality.conscientiousness;
+         the_EmotionalRange_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.EmotionalRange() from PersonalityInsights.personality.emotionalRange;
+         the_Extraversion_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Extraversion() from PersonalityInsights.personality.extraversion;
+         the_Openness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Openness() from PersonalityInsights.personality.openness;
+         the_Needs_Personality_Attributes: com.ibm.developerWorks.pi.Needs() from PersonalityInsights.needs;
+         the_Values_Personality_Attributes: com.ibm.developerWorks.pi.Values() from PersonalityInsights.values;
+         evaluate ((((category.equals("Sales Representative")))));
+      } then {
+         decision.addPersonalityAttribute(((java.util.Vector) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{the_Agreeableness_Personality_Attributes.agreeableness, the_Agreeableness_Personality_Attributes.morality, the_Conscientiousness_Personality_Attributes.achievement, the_Extraversion_Personality_Attributes.assertiveness, the_Extraversion_Personality_Attributes.cheerfulness, the_Extraversion_Personality_Attributes.extraversion, the_Extraversion_Personality_Attributes.friendliness, the_Extraversion_Personality_Attributes.cheerfulness, the_Openness_Personality_Attributes.openness, the_Needs_Personality_Attributes.stability}, new java.util.Vector())));
+      }
+   }
+}
+
+// -- end rule 'CategoryPersonalityAttributeMapping 2'
+// -- begin rule 'CategoryPersonalityAttributeMapping 3'
+package com.ibm.developerWorks.pi {
+   rule CategoryPersonalityAttributeMapping_3 {
+      property ilog.rules.business_name = "CategoryPersonalityAttributeMapping 4";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.CategoryPersonalityAttributeMapping";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsights() from PersonalityInsights;
+         the_Agreeableness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Agreeableness() from PersonalityInsights.personality.agreeableness;
+         the_Conscientiousness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Conscientiousness() from PersonalityInsights.personality.conscientiousness;
+         the_EmotionalRange_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.EmotionalRange() from PersonalityInsights.personality.emotionalRange;
+         the_Extraversion_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Extraversion() from PersonalityInsights.personality.extraversion;
+         the_Openness_Personality_Attributes: com.ibm.developerWorks.pi.BigFive.Openness() from PersonalityInsights.personality.openness;
+         the_Needs_Personality_Attributes: com.ibm.developerWorks.pi.Needs() from PersonalityInsights.needs;
+         the_Values_Personality_Attributes: com.ibm.developerWorks.pi.Values() from PersonalityInsights.values;
+         evaluate ((((category.equals("Test")))));
+      } then {
+         decision.addPersonalityAttribute(((java.util.Vector) ilog.rules.brl.IlrCollectionUtil.populateCollection(new Object[]{the_Conscientiousness_Personality_Attributes.achievement}, new java.util.Vector())));
+      }
+   }
+}
+
+// -- end rule 'CategoryPersonalityAttributeMapping 3'
+// end DT CategoryPersonalityAttributeMapping

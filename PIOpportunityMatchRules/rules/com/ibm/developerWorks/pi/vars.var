@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>vars</name>
+  <uuid>7783f362-df8a-414e-bcf7-729e989db14a</uuid>
+  <documentation><![CDATA[Copyright (C) 2016 IBM Corporation]]></documentation>
+  <variables name="dimensionCount" type="int" initialValue="" verbalization="the number of personaility dimensions available"/>
+  <variables name="percentage" type="java.math.BigDecimal" initialValue="" verbalization="the percentage of the personality dimension"/>
+</ilog.rules.studio.model.base:VariableSet>

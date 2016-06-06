@@ -1,0 +1,153 @@
+/** 
+ * Copyright (C) 2016 IBM Corporation
+ */
+property loadGetterSetterAsProperties "true"
+property origin "xom:/PIOpportunityMatchRules//PersonalityInsightsJavaXOM"
+property uuid "ff10fb9b-c4f9-44ed-b152-951ea8c8dd2e"
+package com.ibm.developerWorks.pi;
+
+
+public class BigFive
+{
+
+    public class Agreeableness
+    {
+        public com.ibm.developerWorks.pi.PersonalityAttribute agreeableness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute altruism;
+        public com.ibm.developerWorks.pi.PersonalityAttribute cooperation;
+        public com.ibm.developerWorks.pi.PersonalityAttribute modesty;
+        public com.ibm.developerWorks.pi.PersonalityAttribute morality;
+        public com.ibm.developerWorks.pi.PersonalityAttribute sympathy;
+        public com.ibm.developerWorks.pi.PersonalityAttribute trust;
+        public Agreeableness();
+    }
+
+    public class Conscientiousness
+    {
+        public com.ibm.developerWorks.pi.PersonalityAttribute achievement;
+        public com.ibm.developerWorks.pi.PersonalityAttribute cautiousness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute conscientiousness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute dutifulness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute orderliness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute selfDiscipline;
+        public com.ibm.developerWorks.pi.PersonalityAttribute selfEfficacy;
+        public Conscientiousness();
+    }
+
+    public class EmotionalRange
+    {
+        public com.ibm.developerWorks.pi.PersonalityAttribute anger;
+        public com.ibm.developerWorks.pi.PersonalityAttribute anxiety;
+        public com.ibm.developerWorks.pi.PersonalityAttribute depression;
+        public com.ibm.developerWorks.pi.PersonalityAttribute immoderation;
+        public com.ibm.developerWorks.pi.PersonalityAttribute neuroticism;
+        public com.ibm.developerWorks.pi.PersonalityAttribute selfConsciousness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute vulnerability;
+        public EmotionalRange();
+    }
+
+    public class Extraversion
+    {
+        public com.ibm.developerWorks.pi.PersonalityAttribute activityLevel;
+        public com.ibm.developerWorks.pi.PersonalityAttribute assertiveness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute cheerfulness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute excitementSeeking;
+        public com.ibm.developerWorks.pi.PersonalityAttribute extraversion;
+        public com.ibm.developerWorks.pi.PersonalityAttribute friendliness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute gregariousness;
+        public Extraversion();
+    }
+
+    public class Openness
+    {
+        public com.ibm.developerWorks.pi.PersonalityAttribute adventurousness;
+        public com.ibm.developerWorks.pi.PersonalityAttribute artisticInterests;
+        public com.ibm.developerWorks.pi.PersonalityAttribute emotionality;
+        public com.ibm.developerWorks.pi.PersonalityAttribute imagination;
+        public com.ibm.developerWorks.pi.PersonalityAttribute intellect;
+        public com.ibm.developerWorks.pi.PersonalityAttribute liberalism;
+        public com.ibm.developerWorks.pi.PersonalityAttribute openness;
+        public Openness();
+    }
+    public com.ibm.developerWorks.pi.BigFive.Agreeableness agreeableness;
+    public com.ibm.developerWorks.pi.BigFive.Conscientiousness conscientiousness;
+    public com.ibm.developerWorks.pi.BigFive.EmotionalRange emotionalRange;
+    public com.ibm.developerWorks.pi.BigFive.Extraversion extraversion;
+    public com.ibm.developerWorks.pi.BigFive.Openness openness;
+    public BigFive();
+}
+
+public class Needs
+{
+    public com.ibm.developerWorks.pi.PersonalityAttribute challenge;
+    public com.ibm.developerWorks.pi.PersonalityAttribute closeness;
+    public com.ibm.developerWorks.pi.PersonalityAttribute curiosity;
+    public com.ibm.developerWorks.pi.PersonalityAttribute excitement;
+    public com.ibm.developerWorks.pi.PersonalityAttribute harmony;
+    public com.ibm.developerWorks.pi.PersonalityAttribute ideal;
+    public com.ibm.developerWorks.pi.PersonalityAttribute liberty;
+    public com.ibm.developerWorks.pi.PersonalityAttribute love;
+    public com.ibm.developerWorks.pi.PersonalityAttribute practicality;
+    public com.ibm.developerWorks.pi.PersonalityAttribute selfExpression;
+    public com.ibm.developerWorks.pi.PersonalityAttribute stability;
+    public com.ibm.developerWorks.pi.PersonalityAttribute structure;
+    public Needs();
+}
+
+public class PersonalityAttribute
+{
+    public string category;
+    public java.util.Vector children domain 0,* class com.ibm.developerWorks.pi.PersonalityAttribute;
+    public string id;
+    public string name;
+    public java.math.BigDecimal percentage;
+    public java.math.BigDecimal sampling_error;
+    public PersonalityAttribute();
+}
+
+public class PersonalityInsights
+{
+    public string id;
+    public com.ibm.developerWorks.pi.Needs needs;
+    public com.ibm.developerWorks.pi.BigFive personality;
+    public string processed_lang;
+    public string source;
+    public com.ibm.developerWorks.pi.PersonalityAttribute tree;
+    public com.ibm.developerWorks.pi.Values values;
+    public int word_count;
+    public string word_count_message;
+    public PersonalityInsights();
+}
+
+public class PersonalityInsightsDecision
+{
+
+    static public final class FLAG
+            extends java.lang.Enum
+    {
+        domain {static EXCCEDS, static SATISFIES, static FAILS, static UNDETERMINED}
+        public static final readonly com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG EXCCEDS;
+        public static final readonly com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG FAILS;
+        public static final readonly com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG SATISFIES;
+        public static final readonly com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG UNDETERMINED;
+        public static com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG valueOf(string arg);
+        public static com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG[] values();
+    }
+    public readonly java.util.Vector personalityAttributes domain 0,* class com.ibm.developerWorks.pi.PersonalityAttribute;
+    public java.math.BigDecimal score;
+    public com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG statusFlag;
+    public PersonalityInsightsDecision();
+    public void addPersonalityAttribute(com.ibm.developerWorks.pi.PersonalityAttribute arg);
+    public void addPersonalityAttribute(java.util.Vector arg domain 0,* class com.ibm.developerWorks.pi.PersonalityAttribute);
+}
+
+public class Values
+{
+    public com.ibm.developerWorks.pi.PersonalityAttribute conservation;
+    public com.ibm.developerWorks.pi.PersonalityAttribute hedonism;
+    public com.ibm.developerWorks.pi.PersonalityAttribute opennessToChange;
+    public com.ibm.developerWorks.pi.PersonalityAttribute selfEnhancement;
+    public com.ibm.developerWorks.pi.PersonalityAttribute selfTranscendence;
+    public Values();
+}
+

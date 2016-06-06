@@ -1,0 +1,1190 @@
+<!-- Copyright (C) 2016 IBM Corporation -->
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>b6c94a1b-3338-49ab-8098-afbc85261a2e</id>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.BigFive</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <import>com.ibm.developerWorks.pi.PersonalityAttribute</import>
+        <import>java.util.Vector</import>
+        <attribute>
+            <name>agreeableness</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Agreeableness".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Agreeableness".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>conscientiousness</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Conscientiousness".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            System.err.println("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
+PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Conscientiousness".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>emotionalRange</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Neuroticism".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Neuroticism".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>extraversion</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Extraversion".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Extraversion".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>openness</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Openness".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // openness_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Openness".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.BigFive.Agreeableness</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <import>com.ibm.developerWorks.pi.PersonalityAttribute</import>
+        <tester language="irl"><![CDATA[
+        return "Agreeableness".equals(this.id);
+        ]]></tester>
+        <attribute>
+            <name>agreeableness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Agreeableness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Agreeableness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>altruism</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Altruism".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Altruism".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>cooperation</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Cooperation".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Cooperation".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>modesty</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Modesty".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Modesty".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>morality</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Morality".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Morality".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>sympathy</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Sympathy".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Sympathy".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>trust</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Trust".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Trust".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.BigFive.Conscientiousness</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <attribute>
+            <name>achievement</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Achievement striving".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Achievement striving".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>cautiousness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Cautiousness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Cautiousness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>conscientiousness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Conscientiousness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Conscientiousness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>dutifulness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Dutifulness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Dutifulness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>orderliness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Orderliness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Orderliness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>selfDiscipline</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Self-discipline".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Self-discipline".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>selfEfficacy</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Self-efficacy".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Self-efficacy".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.BigFive.EmotionalRange</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <tester language="irl"><![CDATA[
+        return "Neuroticism".equals(this.id);
+        ]]></tester>
+        <attribute>
+            <name>anger</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Anger".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Anger".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>anxiety</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Anxiety".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Anxiety".equals(this.children.get(i).id) ) {
+		value =this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>depression</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Depression".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Depression".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>immoderation</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Immoderation".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Immoderation".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>neuroticism</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Neuroticism".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Neuroticism".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>selfConsciousness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Self-consciousness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Self-consciousness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>vulnerability</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Vulnerability".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Vulnerability".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.BigFive.Extraversion</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <tester language="irl"><![CDATA[
+        return "Extraversion".equals(this.id);
+        ]]></tester>
+        <attribute>
+            <name>activityLevel</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Activity level".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Activity level".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>assertiveness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Assertiveness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Assertiveness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>cheerfulness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Cheerfulness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Cheerfulness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>excitementSeeking</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Excitement-seeking".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Excitement-seeking".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>extraversion</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Extraversion".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Extraversion".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>friendliness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Friendliness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Friendliness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>gregariousness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Gregariousness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Gregariousness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.BigFive.Openness</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <tester language="irl"><![CDATA[
+        return "Openness".equals(this.id);
+        ]]></tester>
+        <attribute>
+            <name>adventurousness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Adventurousness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Adventurousness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>artisticInterests</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Artistic interests".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Artistic interests".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>emotionality</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Emotionality".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Emotionality".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>imagination</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Imagination".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Imagination".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>intellect</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Intellect".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Intellect".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>liberalism</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Liberalism".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Liberalism".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>openness</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Openness".equals(this.children.get(i).id) ) {
+		return this.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.children.size(); i++) {
+	if ("Openness".equals(this.children.get(i).id) ) {
+		value = this.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.Needs</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <import>com.ibm.developerWorks.pi.PersonalityAttribute</import>
+        <tester language="irl"><![CDATA[
+        return "needs".equals(this.id);
+        ]]></tester>
+        <attribute>
+            <name>challenge</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>closeness</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Closeness".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Closeness".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>curiosity</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Curiosity".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Curiosity".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>excitement</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Excitement".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Excitement".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>harmony</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Harmony".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Harmony".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>ideal</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Ideal".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Ideal".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>liberty</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Liberty".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Liberty".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>love</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Love".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Love".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>practicality</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Practicality".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Practicality".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>selfExpression</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Self-expression".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Self-expression".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>stability</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Stability".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Stability".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>structure</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Structure".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Structure".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.PersonalityInsights</businessName>
+        <import>com.ibm.developerWorks.pi.PersonalityAttribute</import>
+        <attribute>
+            <name>needs</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.tree.children.size(); i++) {
+	if ("needs".equals(this.tree.children.get(i).id) ) {
+		return this.tree.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.tree.children.size(); i++) {
+	if ("needs".equals(this.tree.children.get(i).id) ) {
+		value = this.tree.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>personality</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.tree.children.size(); i++) {
+	if ("personality".equals(this.tree.children.get(i).id) ) {
+		return this.tree.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.tree.children.size(); i++) {
+	if ("personality".equals(this.tree.children.get(i).id) ) {
+		value = this.tree.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>values</name>
+            <getter language="irl"><![CDATA[
+            for (int i = 0; i < this.tree.children.size(); i++) {
+	if ("values".equals(this.tree.children.get(i).id) ) {
+		return this.tree.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            for (int i = 0; i < this.tree.children.size(); i++) {
+	if ("values".equals(this.tree.children.get(i).id) ) {
+		value = this.tree.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.developerWorks.pi.Values</businessName>
+        <executionName>com.ibm.developerWorks.pi.PersonalityAttribute</executionName>
+        <import>com.ibm.developerWorks.pi.PersonalityAttribute</import>
+        <tester language="irl"><![CDATA[
+        return "values".equals(this.id);
+        ]]></tester>
+        <attribute>
+            <name>conservation</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>hedonism</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>opennessToChange</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>selfEnhancement</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		value  = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+        <attribute>
+            <name>selfTranscendence</name>
+            <getter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		return parent.children.get(i);
+	}
+}
+return null;
+            ]]></getter>
+            <setter language="irl"><![CDATA[
+            PersonalityAttribute parent = this.children.get(0); // Excitement_parent
+for (int i = 0; i < parent.children.size(); i++) {
+	if ("Challenge".equals(parent.children.get(i).id) ) {
+		value = parent.children.get(i);
+	}
+}
+            ]]></setter>
+        </attribute>
+    </class>
+</b2x:translation>

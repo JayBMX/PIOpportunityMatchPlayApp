@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="Copyright" value="Copyright (C) 2016 IBM Corporation"/>
+  </eAnnotations>
+  <name>CategoryPersonalityAttributeMapping</name>
+  <uuid>cfde71dd-9596-4977-8330-7a7cba2c6476</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT Version="7.0" xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+  <Body>
+    <Preconditions>
+      <Text><![CDATA[definitions 
+set 'the Agreeableness Personality Attributes' to the agreeableness of the personality of 'the input personality data';
+set 'the Conscientiousness Personality Attributes' to the conscientiousness of the personality of 'the input personality data' ;
+set 'the EmotionalRange Personality Attributes' to the emotional range of the personality of 'the input personality data' ;
+set 'the Extraversion Personality Attributes' to the extraversion of the personality of 'the input personality data';
+set 'the Openness Personality Attributes' to the openness of the personality of 'the input personality data';
+set 'the Needs Personality Attributes' to the needs of 'the input personality data' ;
+set 'the Values Personality Attributes' to the values of 'the input personality data' ;
+]]></Text>
+    </Preconditions>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA['the opportunity category' is <a string>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[add <personality attributeses> to the list of personality attributes of 'the personality insight decision']]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA["IT Specialist"]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[{ the achievement of 'the Conscientiousness Personality Attributes',   the agreeableness of 'the Agreeableness Personality Attributes',  the intellect of 'the Openness Personality Attributes',  the challenge of 'the Needs Personality Attributes' ,  the practicality of 'the Needs Personality Attributes' ,  the structure of 'the Needs Personality Attributes' ,  the openness to change of 'the Values Personality Attributes'  }]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA["Research"]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[{ the achievement of 'the Conscientiousness Personality Attributes', the cooperation of 'the Agreeableness Personality Attributes' , the imagination of 'the Openness Personality Attributes' , the intellect of 'the Openness Personality Attributes' , the curiosity of 'the Needs Personality Attributes' , the practicality of 'the Needs Personality Attributes'  }]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA["Sales Representative"]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[{ the agreeableness of 'the Agreeableness Personality Attributes' ,  the morality of 'the Agreeableness Personality Attributes' , the achievement of 'the Conscientiousness Personality Attributes' , the assertiveness of 'the Extraversion Personality Attributes' , the cheerfulness of 'the Extraversion Personality Attributes' , the extraversion of 'the Extraversion Personality Attributes' , the friendliness of 'the Extraversion Personality Attributes' , the cheerfulness of 'the Extraversion Personality Attributes' , the openness of 'the Openness Personality Attributes' , the stability of 'the Needs Personality Attributes'  }]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA["Test"]]></Param>
+          </Expression>
+          <ActionSet>
+            <Action DefId="A0">
+              <Expression>
+                <Param><![CDATA[{ the achievement of 'the Conscientiousness Personality Attributes' }]]></Param>
+              </Expression>
+            </Action>
+          </ActionSet>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[Personality Dimension]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[1081]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[Opportunity Category]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[282]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

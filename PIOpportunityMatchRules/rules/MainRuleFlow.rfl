@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <eAnnotations source="ilog.rules.custom_properties">
+    <details key="Copyright" value="Copyright (C) 2016 IBM Corporation"/>
+  </eAnnotations>
+  <name>MainRuleFlow</name>
+  <uuid>382f38f7-e369-4731-ba61-933bdb3e3da5</uuid>
+  <documentation><![CDATA[]]></documentation>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Personality Insight Rules" Ordering="Default">
+        <InitialActions Language="irl"><![CDATA[if (decision == null) {
+
+	decision = new PersonalityInsightsDecision();
+
+}
+
+decision.score = new BigDecimal (0) ;
+
+decision.statusFlag = FLAG.UNDETERMINED;
+
+
+
+]]></InitialActions>
+        <FinalActions Language="irl"><![CDATA[Vector  piattributes = decision.personalityAttributes;
+
+if (piattributes != null) {
+
+percentage = new BigDecimal(0);
+
+for (int i =0; i < piattributes.size(); i++ ) {
+
+	PersonalityAttribute piAttribute = (PersonalityAttribute)piattributes.get(i);
+
+	percentage = percentage.add(piAttribute.percentage);
+
+	dimensionCount++;
+
+}
+
+decision.score = percentage.divide(new BigDecimal(dimensionCount));
+
+} else {
+
+	
+
+	decision.score = BigDecimal.ZERO;
+
+}]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="cfde71dd-9596-4977-8330-7a7cba2c6476"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Personality Insight Decision" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="0894a86a-dc01-4bd2-8817-9e15fe02a823"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_3" Task="Personality Insight Rules"/>
+      <TaskNode Identifier="node_4" Task="Personality Insight Decision"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_2" Source="node_0" Target="node_3"/>
+      <Transition Identifier="transition_1" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">66.705414</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">122.48834</Data>
+      <Data Name="node_4#y">221.05457</Data>
+      <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_3#y">104.35271</Data>
+      <Data Name="node_3#width">245.97678</Data>
+      <Data Name="node_3#name">node_1</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_4#label">Personality Insight Decision</Data>
+      <Data Name="node_3#x">121.48838</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_3#label">Personality Insight Rules</Data>
+      <Data Name="node_0#x">123.48834</Data>
+      <Data Name="node_4#height">66.69833</Data>
+      <Data Name="node_4#width">246.97672</Data>
+      <Data Name="node_1#x">123.48834</Data>
+      <Data Name="node_1#width">21.000002</Data>
+      <Data Name="node_1#y">314.90375</Data>
+      <Data Name="node_1#height">21.000006</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties>
+    <imports><![CDATA[import java.math.BigDecimal;
+import com.ibm.developerWorks.pi.PersonalityInsightsDecision;
+import com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG;
+import com.ibm.developerWorks.pi.PersonalityAttribute;
+import java.util.Vector;
+use com.ibm.developerWorks.pi.percentage;
+use com.ibm.developerWorks.pi.dimensionCount;
+]]></imports>
+  </Properties>
+</Ruleflow>
+</rfModel>
+  <mainFlowTask>true</mainFlowTask>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

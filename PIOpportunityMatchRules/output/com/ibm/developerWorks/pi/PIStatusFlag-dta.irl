@@ -1,0 +1,74 @@
+// begin DT PIStatusFlag
+// -- begin rule 'PIStatusFlag 0'
+package com.ibm.developerWorks.pi {
+   rule PIStatusFlag_0 {
+      property ilog.rules.business_name = "PIStatusFlag 1";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsightsDecision() from decision;
+         evaluate ((((((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("90")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("100")) <= 0)) || ((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("100")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("90")) <= 0))))));
+      } then {
+         decision.statusFlag = com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.EXCCEDS;
+      }
+   }
+}
+
+// -- end rule 'PIStatusFlag 0'
+// -- begin rule 'PIStatusFlag 1'
+package com.ibm.developerWorks.pi {
+   rule PIStatusFlag_1 {
+      property ilog.rules.business_name = "PIStatusFlag 2";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsightsDecision() from decision;
+         evaluate ((((((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("60")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("89")) <= 0)) || ((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("89")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("60")) <= 0))))));
+      } then {
+         decision.statusFlag = com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.SATISFIES;
+      }
+   }
+}
+
+// -- end rule 'PIStatusFlag 1'
+// -- begin rule 'PIStatusFlag 2'
+package com.ibm.developerWorks.pi {
+   rule PIStatusFlag_2 {
+      property ilog.rules.business_name = "PIStatusFlag 3";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsightsDecision() from decision;
+         evaluate ((((((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("0")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("59")) <= 0)) || ((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("59")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("0")) <= 0))))));
+      } then {
+         decision.statusFlag = com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.FAILS;
+      }
+   }
+}
+
+// -- end rule 'PIStatusFlag 2'
+// -- begin rule 'PIStatusFlag 3'
+package com.ibm.developerWorks.pi {
+   rule PIStatusFlag_3 {
+      property ilog.rules.business_name = "PIStatusFlag 4";
+      property ilog.rules.dt = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.group = "com.ibm.developerWorks.pi.PIStatusFlag";
+      property ilog.rules.package_name = "com.ibm.developerWorks.pi";
+      property status = "new";
+      when {
+         com.ibm.developerWorks.pi.PersonalityInsightsDecision() from decision;
+         evaluate (((!((((((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("90")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("100")) <= 0)) || ((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("100")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("90")) <= 0)))) || ((((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("60")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("89")) <= 0)) || ((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("89")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("60")) <= 0)))) || ((((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("0")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("59")) <= 0)) || ((decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("59")) >= 0) && (decision.score.multiply(new java.math.BigDecimal("100")).compareTo(new java.math.BigDecimal("0")) <= 0)))))))));
+      } then {
+         decision.statusFlag = com.ibm.developerWorks.pi.PersonalityInsightsDecision.FLAG.UNDETERMINED;
+      }
+   }
+}
+
+// -- end rule 'PIStatusFlag 3'
+// end DT PIStatusFlag

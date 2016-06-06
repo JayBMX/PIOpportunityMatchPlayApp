@@ -1,0 +1,25 @@
+# Copyright (C) 2016 IBM Corporation
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           com.ibm.developerWorks.demo.controllers.Analyze.showLandingPage()
+
+GET		/analyze					com.ibm.developerWorks.demo.controllers.Analyze.showLandingPage()
+GET		/analyze/					com.ibm.developerWorks.demo.controllers.Analyze.showLandingPage()
+
+POST	/analyze					com.ibm.developerWorks.demo.controllers.Analyze.analyzeText()
+POST	/analyze/					com.ibm.developerWorks.demo.controllers.Analyze.analyzeText()
+
+GET		/analyze/results			com.ibm.developerWorks.demo.controllers.Analyze.showResults()
+GET		/analyze/results/			com.ibm.developerWorks.demo.controllers.Analyze.showResults()
+
+GET		/review						com.ibm.developerWorks.demo.controllers.Review.showApplications()
+GET		/review/					com.ibm.developerWorks.demo.controllers.Review.showApplications()
+
+GET		/review/resumedownload		com.ibm.developerWorks.demo.controllers.Review.downloadResume(textSampleId: Long)
+GET		/review/resumedownload/		com.ibm.developerWorks.demo.controllers.Review.downloadResume(textSampleId: Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file              controllers.Assets.at(path="/public", file)
